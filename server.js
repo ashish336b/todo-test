@@ -35,13 +35,6 @@ app.post("/todo/add", (req, res) => {
   const { task } = req.body;
 
   // 🛑 Validate request
-  if (!task) {
-    return res.status(400).json({ error: "Task is required." });
-  }
-
-  if (typeof task !== "string" || task.trim() === "") {
-    return res.status(400).json({ error: "Task cannot be empty." });
-  }
 
   let tasks = readTasks();
 
