@@ -16,5 +16,6 @@ jobs:
         id: pragent
         uses: qodo-ai/pr-agent@main
         env:
-          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          GEMINI_API_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MODEL_PROVIDER: "gemini"
